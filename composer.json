@@ -3,33 +3,38 @@
     "description": "a simple rest api client for laravel",
     "type": "library",
     "license": "MIT",
-    "keywords": [
-        "laravel",
-        "rest",
-        "api"
-    ],
-    "autoload": {
-        "psr-4": {
-            "Grandgarage\\ApiClient\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Christoph Murauer",
             "email": "christoph.murauer@grandgarage.eu"
         }
     ],
+    "keywords": [
+        "laravel",
+        "rest",
+        "api"
+    ],
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^8.0|^9.0"
+        "illuminate/support": "^7|^8|^9"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^6|^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grandgarage\\ApiClient\\": "src/"
+        }
+    },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
         "laravel": {
             "providers": [
-                "ServiceProvider"
+                "Grandgarage\\ApiClient\\ServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
